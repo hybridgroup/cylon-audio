@@ -11,6 +11,13 @@ describe("Driver", function() {
     });
   });
 
+  describe("#commands", function() {
+    it("is an object containing API commands", function() {
+      expect(driver.commands).to.be.an('object');
+      expect(driver.commands.play).to.be.eql(driver.play);
+    });
+  });
+
   describe("#start", function() {
     beforeEach(function() {
       driver.defineDriverEvent = spy();
