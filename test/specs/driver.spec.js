@@ -1,11 +1,42 @@
 'use strict';
 
-var Audio = source("driver");
+var Driver = source("driver");
 
-describe("Cylon.Drivers.Audio", function() {
-  var driver = new Audio({
-    device: { connection: 'connect' }
+describe("Driver", function() {
+  var driver;
+
+  beforeEach(function() {
+    driver = new Driver({
+      device: { connection: {} }
+    });
   });
 
-  it("needs tests");
+  describe("#commands", function() {
+    it("is an object containing API commands", function() {
+      expect(driver.commands).to.be.an('object');
+      expect(driver.commands.play).to.be.eql(driver.play);
+    });
+  });
+
+  describe("#start", function() {
+    beforeEach(function() {
+      driver.defineDriverEvent = spy();
+    });
+
+    it("defines the 'playing' event", function() {
+      driver.start(spy());
+      expect(driver.defineDriverEvent).to.be.calledWith('playing');
+    });
+  });
+
+  describe("#play", function() {
+    beforeEach(function() {
+      driver.connection.play = spy();
+    });
+
+    it("tells the connection to play the provided track", function() {
+      driver.play('track');
+      expect(driver.connection.play).to.be.calledWith('track');
+    });
+  });
 });
