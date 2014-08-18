@@ -18,3 +18,8 @@ cover:
 # Run JSHint
 lint:
 	@$(BIN)/jshint ./lib
+
+release:
+	@git tag -m "$(VERSION)" v$(VERSION)
+	@git push --tags
+	@npm publish ./

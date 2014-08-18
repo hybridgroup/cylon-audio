@@ -3,18 +3,20 @@
 Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics and
 physical computing using Node.js
 
-This repository contains the Cylon adaptor for Audio.
+This repository contains the Cylon adaptor for Audio reproduction capabilities.
 
 For more information about Cylon, check out the repo at
 https://github.com/hybridgroup/cylon
 
 ## Getting Started
 
-Install the module with: `npm install cylon-audio`
+Install the module with:
 
-## Examples
+    $ npm install cylon-audio
 
-## Connecting
+## How to use
+
+Using the cylon-audio module is pretty easy, pretty much just install the npm module and you are good to go, use it as you would any other device passing along the audio you wish to reproduce. See the example below for further details.
 
 ```javascript
 var Cylon = require('cylon');
@@ -24,12 +26,16 @@ Cylon.robot({
   device: {name: 'audio', driver: 'audio'},
 
   work: function(my) {
-    // provide an example of your module here
-  }
-}).start();
-```
 
-Explain how to connect from the computer to the device here...
+    my.audio.on('playing', function(song){
+      console.log('Playing this nice tune: "' + song + '"');
+    });
+
+    // You can pass a string with a full or relative path here,
+    my.audio.play('./audio_samples/audio-sample.mp3');
+  }
+}).start(); 
+```
 
 ## Contributing
 
@@ -39,8 +45,11 @@ using `make test` and `make lint`.
 
 ## Release History
 
-None yet...
+Version 0.1.0 - Initial release
 
 ## License
 
-Copyright (c) 2014 Your Name Here. See `LICENSE` for more details
+Copyright (c) 2014 The Hybrid Group. Licensed under the Apache 2.0 license.
+
+
+
