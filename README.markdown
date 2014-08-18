@@ -16,9 +16,7 @@ Install the module with:
 
 ## How to use
 
-Using the cylon-audio module is pretty easy, pretty much just install the npm module
-and you are good to go, use it as you would any other device passing along the audio
-you wish to reproduce. See the example below for further details.
+Using the cylon-audio module is pretty easy, pretty much just install the npm module and you are good to go, use it as you would any other device passing along the audio you wish to reproduce. See the example below for further details.
 
 ```javascript
 var Cylon = require('cylon');
@@ -33,7 +31,7 @@ Cylon.robot({
       console.log('Playing this nice tune: "' + song + '"');
     });
 
-    // You can also pass a string with a full or relative path here,
+    // You can pass a string with a full or relative path here,
     my.audio.play('./audio_samples/audio-sample.mp3');
   }
 }).start(); 
@@ -51,4 +49,7 @@ Version 0.1.0 - Initial release
 
 ## License
 
-Copyright (c) 2014 Your Name Here. See `LICENSE` for more details
+Copyright (c) 2014 The Hybrid Group. Licensed under the Apache 2.0 license.
+
+
+
