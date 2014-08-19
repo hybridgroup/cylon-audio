@@ -45,6 +45,8 @@ using `make test` and `make lint`.
 
 ## Release History
 
+Version 0.2.0 - Improved functionality, compatibility with Cylon 0.18.0
+
 Version 0.1.0 - Initial release
 
 ## License
