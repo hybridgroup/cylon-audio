@@ -3,3 +3,6 @@ script: "make"
 node_js:
   - '0.10'
 compiler: clang
+
+before_install:
+  - apt-get install libmp3lame-dev libmpg123-dev
