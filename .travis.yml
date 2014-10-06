@@ -1,10 +1,13 @@
 language: node_js
-script: "make"
+compiler: clang
 node_js:
   - '0.10'
-compiler: clang
-
 before_install:
   - sudo apt-get install libasound2-dev
   - sudo apt-get install libmp3lame-dev libmpg123-dev
-
+install:
+  - npm install
+  - npm install -g istanbul codeclimate-test-reporter
+script: 
+  - make cover
+  - CODECLIMATE_REPO_TOKEN=a5609b81800d154cfe00648f8ffeb68b76ce273637c6bee3d89e818bac6d6452 codeclimate < coverage/lcov.info
