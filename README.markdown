@@ -48,6 +48,8 @@ using `make test` and `make lint`.
 
 ## Release History
 
+Version 0.4.0 - Compatibility with Cylon 0.20.0
+
 Version 0.3.0 - Compatibility with Cylon 0.19.0
 
 Version 0.2.0 - Improved functionality, compatibility with Cylon 0.18.0
@@ -57,6 +59,3 @@ Version 0.1.0 - Initial release
 ## License
 
 Copyright (c) 2014 The Hybrid Group. Licensed under the Apache 2.0 license.
-
-
-

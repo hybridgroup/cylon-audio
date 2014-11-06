@@ -1,6 +1,7 @@
 'use strict';
 
 process.env.NODE_ENV = 'test';
+global.CYLON_TEST = true;
 
 var path = require('path');
 
@@ -27,4 +28,4 @@ global.source = function(module) {
 };
 
 var Cylon = require('cylon');
-Cylon.Logger.setup(false);
+Cylon.config({ logging: { logger: false } });
