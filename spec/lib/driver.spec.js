@@ -7,7 +7,7 @@ describe("Driver", function() {
 
   beforeEach(function() {
     driver = new Driver({
-      device: { connection: {} }
+      adaptor: {}
     });
   });
 
@@ -31,12 +31,12 @@ describe("Driver", function() {
 
   describe("#play", function() {
     beforeEach(function() {
-      driver.connection.play = spy();
+      driver.adaptor.play = spy();
     });
 
     it("tells the connection to play the provided track", function() {
       driver.play('track');
-      expect(driver.connection.play).to.be.calledWith('track');
+      expect(driver.adaptor.play).to.be.calledWith('track');
     });
   });
 });
