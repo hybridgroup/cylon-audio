@@ -25,11 +25,15 @@ Using the cylon-audio module is pretty easy, pretty much just install the npm mo
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection: { name: 'audio', adaptor: 'audio' },
-  device: {name: 'audio', driver: 'audio'},
+  connections: {
+    audio: { adaptor: 'audio' }
+  },
+
+  devices: {
+    audio: { driver: 'audio' }
+  },
 
   work: function(my) {
-
     my.audio.on('playing', function(song){
       console.log('Playing this nice tune: "' + song + '"');
     });
