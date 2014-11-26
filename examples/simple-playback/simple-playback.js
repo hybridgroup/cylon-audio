@@ -1,8 +1,13 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection: { name: 'audio', adaptor: 'audio' },
-  device: {name: 'audio', driver: 'audio'},
+  connections: {
+    audio: { adaptor: 'audio' }
+  },
+
+  devices: {
+    audio: { driver: 'audio' }
+  },
 
   work: function(my) {
 

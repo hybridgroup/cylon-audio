@@ -1,11 +1,15 @@
 var Cylon = require('cylon');
 
 Cylon.robot({
-  connection: { name: 'records', adaptor: 'audio', tracks: ['./audio_samples/audio-sample.mp3'] },
-  device: {name: 'jukebox', driver: 'audio'},
+  connections: {
+    records: { adaptor: 'audio', tracks: ['./audio_samples/audio-sample.mp3'] }
+  },
+
+  devices: {
+    jukebox: { driver: 'audio' }
+  },
 
   work: function(my) {
-
     my.jukebox.on('playing', function(song){
       console.log('Playing this nice tune: "' + song + '"');
     });
