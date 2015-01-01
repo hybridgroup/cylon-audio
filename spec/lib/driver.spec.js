@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 var Driver = source("driver");
 
@@ -13,7 +13,7 @@ describe("Driver", function() {
 
   describe("#commands", function() {
     it("is an object containing API commands", function() {
-      expect(driver.commands).to.be.an('object');
+      expect(driver.commands).to.be.an("object");
       expect(driver.commands.play).to.be.eql(driver.play);
     });
   });
@@ -25,7 +25,7 @@ describe("Driver", function() {
 
     it("defines the 'playing' event", function() {
       driver.start(spy());
-      expect(driver.defineDriverEvent).to.be.calledWith('playing');
+      expect(driver.defineDriverEvent).to.be.calledWith("playing");
     });
   });
 
@@ -35,8 +35,8 @@ describe("Driver", function() {
     });
 
     it("tells the connection to play the provided track", function() {
-      driver.play('track');
-      expect(driver.connection.play).to.be.calledWith('track');
+      driver.play("track");
+      expect(driver.connection.play).to.be.calledWith("track");
     });
   });
 });

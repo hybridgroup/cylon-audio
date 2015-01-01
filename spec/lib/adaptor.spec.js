@@ -1,9 +1,11 @@
-'use strict';
+"use strict";
 
 var Audio = source("adaptor");
 
 describe("Cylon.Adaptors.Audio", function() {
-  var adaptor = new Audio();
+  var audio = new Audio();
 
-  it("needs tests");
+  it("needs tests", function() {
+    expect(audio).to.be.an.instanceOf(Audio);
+  });
 });
