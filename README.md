@@ -15,7 +15,7 @@ https://github.com/hybridgroup/cylon
 
 Install the module with:
 
-    $ npm install cylon-audio
+    $ npm install cylon cylon-audio
 
 ## How to Use
 
