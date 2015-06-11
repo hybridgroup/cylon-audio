@@ -9,7 +9,7 @@ Cylon
   })
   .device("jukebox", { driver: "audio" })
   .on("ready", function(robot) {
-    robot.jukebox.on("playing", function(song){
+    robot.jukebox.on("playing", function(song) {
       console.log("Playing this nice tune: \"" + song + "\"");
     });
 

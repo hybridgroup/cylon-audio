@@ -1,9 +1,9 @@
 "use strict";
 
-var audio = source("cylon-audio");
+var audio = lib("cylon-audio");
 
-var Adaptor = source("adaptor"),
-    Driver = source("driver");
+var Adaptor = lib("adaptor"),
+    Driver = lib("driver");
 
 describe("Cylon.Audio", function() {
   describe("#adaptors", function() {

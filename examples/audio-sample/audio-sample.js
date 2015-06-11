@@ -12,7 +12,7 @@ Cylon.robot({
   },
 
   work: function(my) {
-    my.jukebox.on("playing", function(song){
+    my.jukebox.on("playing", function(song) {
       console.log("Playing this nice tune: \"" + song + "\"");
     });
 

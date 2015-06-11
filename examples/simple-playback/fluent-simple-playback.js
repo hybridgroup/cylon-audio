@@ -8,7 +8,7 @@ Cylon
   .device("audio", { driver: "audio" })
 
   .on("ready", function(bot) {
-    bot.audio.on("playing", function(song){
+    bot.audio.on("playing", function(song) {
       console.log("Playing this nice tune: \"" + song + "\"");
     });
 

@@ -1,6 +1,6 @@
 "use strict";
 
-var Audio = source("adaptor");
+var Audio = lib("adaptor");
 
 describe("Cylon.Adaptors.Audio", function() {
   var audio = new Audio();

@@ -13,7 +13,7 @@ Cylon.robot({
 
   work: function(my) {
 
-    my.audio.on("playing", function(song){
+    my.audio.on("playing", function(song) {
       console.log("Playing this nice tune: \"" + song + "\"");
     });
 
