@@ -1,6 +1,6 @@
 "use strict";
 
-var audio = lib("cylon-audio");
+var audio = lib("../");
 
 var Adaptor = lib("adaptor"),
     Driver = lib("driver");

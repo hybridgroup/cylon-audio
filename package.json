@@ -1,7 +1,6 @@
 {
   "name": "cylon-audio",
   "version": "0.7.0",
-  "main": "lib/cylon-audio.js",
   "description": "Cylon module for Audio",
   "homepage": "http://cylonjs.com",
   "bugs": "https://github.com/hybridgroup/cylon-audio/issues",
