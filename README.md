@@ -57,7 +57,7 @@ To verify that the system is working, run this command:
 aplay /usr/share/sounds/alsa/Front_Center.wav
 ```
 
-If you hear audio, you should now be able to run `npm install cylon-audio`.
+If you hear audio, you should now be able to run `npm install cylon-audio`. Thanks to [http://alextgalileo.altervista.org/blog/lets-make-noise-play-audio-edison/](http://alextgalileo.altervista.org/blog/lets-make-noise-play-audio-edison/) for which partof these instructions were derived.
 
 ## How to Use
 
