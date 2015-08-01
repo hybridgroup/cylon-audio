@@ -1,14 +1,13 @@
 # Cylon.js For Audio
 
-Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics and
-physical computing using Node.js
+Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics, physical computing, and the Internet of Things.
 
-This repository contains the Cylon adaptor for Audio reproduction capabilities.
+This repository contains the Cylon adaptor for Audio playback. The implementation uses the [noe-speaker](https://github.com/TooTallNate/node-speaker) node module from [@TooTallNate](https://github.com/TooTallNate/). Thank you!
 
-For more information about Cylon, check out the repo at
-https://github.com/hybridgroup/cylon
+Want to use Ruby on robots? Check out our sister project Artoo (http://artoo.io)
 
-[![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-audio/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-audio) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-audio/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-audio)
+Want to use the Go programming language to power your robots? Check out our sister project Gobot (http://gobot.io).
+
 [![Build Status](https://secure.travis-ci.org/hybridgroup/cylon-audio.png?branch=master)](http://travis-ci.org/hybridgroup/cylon-audio) [![Code Climate](https://codeclimate.com/github/hybridgroup/cylon-audio/badges/gpa.svg)](https://codeclimate.com/github/hybridgroup/cylon-audio) [![Test Coverage](https://codeclimate.com/github/hybridgroup/cylon-audio/badges/coverage.svg)](https://codeclimate.com/github/hybridgroup/cylon-audio)
 
 ## How to Install
