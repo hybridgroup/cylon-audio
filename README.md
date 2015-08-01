@@ -2,7 +2,7 @@
 
 Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics, physical computing, and the Internet of Things.
 
-This repository contains the Cylon adaptor for Audio playback. The implementation uses the [noe-speaker](https://github.com/TooTallNate/node-speaker) node module from [@TooTallNate](https://github.com/TooTallNate/). Thank you!
+This repository contains the Cylon adaptor for Audio playback. The implementation uses the [node-speaker](https://github.com/TooTallNate/node-speaker) node module from [@TooTallNate](https://github.com/TooTallNate/). Thank you!
 
 Want to use Ruby on robots? Check out our sister project Artoo (http://artoo.io)
 
