@@ -1,6 +1,6 @@
 {
   "name": "cylon-audio",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "description": "Cylon module for Audio",
   "homepage": "http://cylonjs.com",
   "bugs": "https://github.com/hybridgroup/cylon-audio/issues",
@@ -22,7 +22,8 @@
     "robots",
     "robotics",
     "iot",
-    "audio"
+    "audio",
+    "sound"
   ],
 
   "devDependencies": {
@@ -34,7 +35,7 @@
   },
 
   "dependencies": {
-    "cylon": "~1.1.0",
+    "cylon": "^1.2.0",
     "lame": ">=1.1.1",
     "speaker": ">=0.2.1"
   }
