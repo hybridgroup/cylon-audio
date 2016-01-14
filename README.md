@@ -2,7 +2,7 @@
 
 Cylon.js (http://cylonjs.com) is a JavaScript framework for robotics, physical computing, and the Internet of Things.
 
-This repository contains the Cylon adaptor for Audio playback. The implementation uses the [node-speaker](https://github.com/TooTallNate/node-speaker) node module from [@TooTallNate](https://github.com/TooTallNate/). Thank you!
+This repository contains the Cylon adaptor for Audio playback. The implementation uses the [node-mpg123](https://github.com/maciek134/node-mpg123) node module from [@maciek134](https://github.com/maciek134/). Thank you!
 
 Want to use Ruby on robots? Check out our sister project Artoo (http://artoo.io)
 
@@ -16,6 +16,17 @@ Install the module with:
 
     $ npm install cylon cylon-audio
 
+### Prerequisites for OSX
+
+    $ brew install mpg123    
+
+### Prerequisites for Ubuntu
+
+    $ sudo apt-get install mpg123
+
+### Prerequisites for Windows
+
+Download and install the latest release for Windows from http://www.mpg123.de/download/win32/?V=1&O=D
 
 ### Special instructions for Intel Edison
 
@@ -33,54 +44,29 @@ And then run:
 
 ```
 opkg update
-opkg install alsa-tools-dev
+opkg install mpg123
 ```
-
-Plug in your USB sound device, then run, then run this command to check that ALSA sees your device:
-
-```
-aplay -Ll
-```
-
-Create a ~/.asoundrc file (or an /etc/asound.conf file for all users):
-
-```
-pcm.!default sysdefault:Device
-```
-
-Change `Device` to match the name of the card returned by the `aplay -Ll` command.
-
-To verify that the system is working, run this command:
-
-```
-aplay /usr/share/sounds/alsa/Front_Center.wav
-```
-
-If you hear audio, you should now be able to run `npm install cylon-audio`. Thanks to [http://alextgalileo.altervista.org/blog/lets-make-noise-play-audio-edison/](http://alextgalileo.altervista.org/blog/lets-make-noise-play-audio-edison/) for which partof these instructions were derived.
 
 ## How to Use
 
 Using the cylon-audio module is pretty easy, pretty much just install the npm module and you are good to go, use it as you would any other device passing along the audio you wish to reproduce. To play audio, pass a full or relative path to the `play` function.  See the example below for further details.
 
 ```javascript
-var Cylon = require('cylon');
+"use strict";
+
+var Cylon = require("cylon");
 
 Cylon.robot({
   connections: {
-    audio: { adaptor: 'audio' }
+    audio: { adaptor: "audio" }
   },
 
   devices: {
-    audio: { driver: 'audio' }
+    sound: { driver: "audio", file: "./audio_samples/audio-sample.mp3" }
   },
 
   work: function(my) {
-    my.audio.on('playing', function(song){
-      console.log('Playing this nice tune: "' + song + '"');
-    });
-
-    // You can pass a string with a full or relative path here,
-    my.audio.play('./audio_samples/audio-sample.mp3');
+    my.sound.play();
   }
 }).start();
 ```
@@ -101,4 +87,4 @@ For the release history, please go to [https://github.com/hybridgroup/cylon-audi
 
 ## License
 
-Copyright (c) 2014 The Hybrid Group. Licensed under the Apache 2.0 license.
+Copyright (c) 2014-2016 The Hybrid Group. Licensed under the Apache 2.0 license.

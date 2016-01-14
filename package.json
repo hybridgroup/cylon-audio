@@ -23,7 +23,8 @@
     "robotics",
     "iot",
     "audio",
-    "sound"
+    "sound",
+    "mp3"
   ],
 
   "devDependencies": {
@@ -36,7 +37,6 @@
 
   "dependencies": {
     "cylon": "^1.2.0",
-    "lame": ">=1.1.1",
-    "speaker": ">=0.2.1"
+    "node-mpg123": "^1.0.2-23"
   }
 }

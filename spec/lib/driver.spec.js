@@ -18,25 +18,16 @@ describe("Driver", function() {
     });
   });
 
-  describe("#start", function() {
-    beforeEach(function() {
-      driver.defineDriverEvent = spy();
-    });
-
-    it("defines the 'playing' event", function() {
-      driver.start(spy());
-      expect(driver.defineDriverEvent).to.be.calledWith("playing");
-    });
-  });
-
   describe("#play", function() {
+    var player = spy();
+
     beforeEach(function() {
-      driver.connection.play = spy();
+      driver.connection.sound = function() { return { play: player }; };
     });
 
     it("tells the connection to play the provided track", function() {
       driver.play("track");
-      expect(driver.connection.play).to.be.calledWith("track");
+      expect(player).to.be.called;
     });
   });
 });
