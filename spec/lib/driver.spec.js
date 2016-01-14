@@ -19,10 +19,11 @@ describe("Driver", function() {
   });
 
   describe("#play", function() {
-    var player = spy();
+    var player = spy(),
+        on = spy();
 
     beforeEach(function() {
-      driver.connection.sound = function() { return { play: player }; };
+      driver.connection.sound = function() { return { play: player, on: on }; };
     });
 
     it("tells the connection to play the provided track", function() {
