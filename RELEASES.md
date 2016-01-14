@@ -1,5 +1,7 @@
 ## Release History
 
+Version 0.11.0 - Add loop function
+
 Version 0.10.0 - Switch over to use MPG123
 
 Version 0.9.0 - Use Cylon 1.2.0
